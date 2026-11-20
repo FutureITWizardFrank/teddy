@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Hi, I'm Teddy! Please help me get home</title>
+<style>
+  :root {
+    --bg: #f6f3ee;
+    --card: #ffffff;
+    --ink: #1f2328;
+    --muted: #5c636b;
+    --call: #1a7f37;
+    --text: #0969da;
+    --warn-bg: #fff4e5;
+    --warn-ink: #8a4b00;
+    --radius: 18px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.45;
+  }
+  main {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px 16px 40px;
+  }
+  .card {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    overflow: hidden;
+  }
+  .photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    background: #e9e4dc;
+  }
+  .content { padding: 20px; }
+  h1 {
+    margin: 0 0 4px;
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+  }
+  .lede {
+    margin: 0 0 18px;
+    font-size: 1.1rem;
+    color: var(--muted);
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 12px;
+    border-radius: 14px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+  }
+  .btn.call { background: var(--call); }
+  .btn.text { background: var(--text); }
+  .btn svg { width: 24px; height: 24px; fill: currentColor; }
+  .phone {
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--muted);
+    margin: 4px 0 20px;
+  }
+  .phone strong { color: var(--ink); }
+  .notice {
+    background: var(--warn-bg);
+    color: var(--warn-ink);
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    font-size: .98rem;
+  }
+  dl { margin: 0; }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-top: 1px solid #eee;
+  }
+  dt { color: var(--muted); }
+  dd { margin: 0; text-align: right; font-weight: 600; }
+  dd a { color: var(--text); text-decoration: none; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: .9rem;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="card">
+    <!-- EDIT: put a square-ish photo named teddy.jpg in the repo next to this file -->
+    <img class="photo" src="teddy.jpg" alt="Photo of Teddy"
+         onerror="this.style.display='none'">
+
+    <div class="content">
+      <h1>Hi, I'm Teddy! 🐾</h1>
+      <p class="lede">If you found me, I'm probably lost. Please contact my human, Frank.</p>
+
+      <!-- EDIT: phone number appears in 3 places below (tel:, sms:, and the text) -->
+      <a class="btn call" href="tel:+18622105387">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+        Call Frank
+      </a>
+      <a class="btn text" href="sms:+18622105387?&body=Hi%20Frank%2C%20I%20found%20Teddy!%20I'm%20at%3A%20">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>
+        Text Frank
+      </a>
+      <p class="phone"><strong>(862) 210-5387</strong> · Scottsdale, AZ</p>
+
+      <div class="notice">
+        <!-- EDIT: medical needs / allergies / temperament. Delete this box if none. -->
+        <strong>Good to know:</strong> I'm friendly. Please give me some water. It's hot out here!
+      </div>
+
+      <dl>
+        <div class="row">
+          <dt>Microchipped</dt>
+          <dd>Yes</dd> <!-- EDIT: Yes / No -->
+        </div>
+        <div class="row">
+          <dt>Vet</dt>
+          <!-- EDIT: vet name + number, or delete this row -->
+          <dd><a href="tel:+10000000000">Vet Name · (000) 000-0000</a></dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+
+  <footer>Thank you for helping Teddy get home ❤️</footer>
+</main>
+</body>
+</html>
